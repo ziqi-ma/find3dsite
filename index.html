@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Find3D.">
+  <meta name="keywords" content="Find3D, open-world 3D part segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Any Part in 3D</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Find Any Part in 3D</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://ziqi-ma.github.io/" target="_blank" rel="noopener noreferrer">Ziqi Ma</a>,</span>
+              <span class="author-block">
+                <a href="http://www.yisongyue.com/" target="_blank" rel="noopener noreferrer">Yisong Yue</a>,</span>
+              <span class="author-block">
+                <a href="https://gkioxari.github.io/" target="_blank" rel="noopener noreferrer">Georgia
+                  Gkioxari</a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">California Institute of Technology</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="pdf link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="arxiv link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="github link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="demo link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+
+      <div class="hero-body">
+        <p style="font-size: 20px; color: black;">
+          We present <b>Find3D</b>: a method to segment <b>any</b> part in <b>any</b> object based on <b>any</b> text query.
+          Find3D lifts 3D part segmentation into the open world, and even works on in-the-wild 3D constructions from iPhone photos and AI-generated images!
+        </p>
+        <video id="teaser" autoplay muted loop playsinline height="80%">
+          <source src="static/videos/sidebyside.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p style="font-size: 18px; color: black;">
+              The ability to locate parts in an object is important in embodied applications.
+              However, prior works studying this capability are limited to a small number of object types (such as chairs and tables), and only allow queries for a predefined set of parts.
+              These methods are called "closed-world" segmentation methods. Our method, called Find3D, lifts 3D part segmentation to the open world - you can query <b>any</b> part in <b>any</b> object based on <b>any</b> text query.
+              This is achieved by a powerful data engine which leverages 2D foundation models for creating training data, and a contrastive-based recipe for training a scalable 3D model.
+              Our method allows us to train a model from 30K diverse 3D assets from the internet (from the Objaverse dataset) with 1.5M annotated parts, without any human annotation. 
+              Our model provides strong performance and generalization across multiple datasets, with up to a <b>3&times</b> improvement in mIoU over the next best method.
+              Find3D is also <b>6&times</b> to over <b>300&times</b> faster than existing baselines.
+              To encourage research in general-category open-world 3D part segmentation, we also release a benchmark for general objects and parts.
+            </p>
+            <img src="static/images/teaser.png" alt="Approach" width="100%">
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Approach. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Diverse Objects and Parts</h2>
+
+          <div class="content has-text-justified">
+            <p style="font-size: 20px; color: black;">
+              Our method, called Find3D, works on diverse objects from Objaverse.
+            </p>
+            <video id="allours" autoplay muted loop playsinline height="80%">
+              <source src="static/videos/allours.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Approach. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">In the Wild</h2>
+
+          <div class="content has-text-justified">
+            <p style="font-size: 20px; color: black;">
+              Find3D also works on in-the-wild 3D constructions from iPhone photos or AI-generated images, which can be noisy and challenging!
+            </p>
+            <video id="wild" autoplay muted loop playsinline height="80%">
+              <source src="static/videos/wild.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Approach. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Robustness</h2>
+
+          <div class="content has-text-justified">
+            <p style="font-size: 20px; color: black;">
+              Find3D is robust. The "segment per pose" videos show segmentation results on 150 different object orientations, one frame per orientation.
+              The "average across poses" videos show the averaged prediction across all orientations.
+              The heavy flickering of the existing method means that its output varies greatly as the object rotates, whereas Find3D stays much more stable. 
+            </p>
+            <video id="robustness" autoplay muted loop playsinline height="80%">
+              <source src="static/videos/robustness.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Approach. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Query Flexibility</h2>
+
+          <div class="content has-text-justified">
+            <p style="font-size: 20px; color: black;">
+              In a real application, the user might use different types of query, such as "gloves" vs. "hand", or query at different levels of granularity, such as "limbs" vs. "arms". Find3D can handle this flexibility!
+            </p>
+            <div style="text-align: center;">
+            <img src="static/images/ambiguity.png" alt="Query flexibility" width="80%">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p style="font-size: 20px; color: black;">
+              Find3D consists of a data engine and a transformer-based point cloud model trained with a contrastive objective.
+            </p>
+            <img src="static/images/data_engine.png" alt="Data Engine" width="100%">
+            <p style="font-size: 18px; color: black;">
+              <br>
+              <b>Data engine:</b> we render 3D assets from the Objaverse dataset into multiple views.
+              Each view is passed to SAM with gridpoint promts for segmentation.
+              For each mask returned by SAM, we query Gemini for the corresponding part name. This gives us (mask, text) pairs.
+              We embed the part name into the latent embedding space of a vision and language foundation model, such as SigLIP.
+              The mask can be back-projected to the 3D point cloud via projection geometry.
+              We label every point in the backprojection with the label text embedding.
+              This gives us a (points, text embedding) pair, as shown on the right side of the figure.
+              Our data engine provides 1.5 million (points, text embedding) labels.
+            </p>
+            <img src="static/images/method.png" alt="Method" width="100%">
+            <p style="font-size: 18px; color: black;">
+              <br>
+              <b>Model:</b> With the labeled data from our data engine, we can now train a model.
+              We use a transformer-based model based on the PT3 architecture, which treats the point cloud as a sequence and performs block attention.
+              This model returns a pointwise feature, which can be queries with any free-formed text via cosine similarity with the text embedding.
+              However, to train such a model, there are still two challenges.
+              1) Each point can have multiple labels, denoting various aspects of a part, such as location, function, or material.
+              2) Because each mask comes from one camera view, it only covers a part partially (seen on the right side of the figure) and many points are unlabeled.
+              To resolve these challenges, we use a contrastive objective that allows for scalable training on the data generated by our data engine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{replace this
+}</code></pre>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div id='plot-loading-div' class="box">
+        Loading model...
+      </div>
+      <div id='plot-div'></div>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+</body>
+
+</html>
