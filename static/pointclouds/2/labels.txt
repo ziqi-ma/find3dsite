@@ -1,0 +1,13 @@
+"Body",
+"Clothing",
+"Hair",
+"Head",
+"Arm",
+"Ear",
+"Foot",
+"Hand",
+"Leg",
+"Shorts",
+"Tail"
+"white", "red", "green", "blue", "yellow", "magenta", "cyan","grey", "olive",
+"purple", "teal", "navy"

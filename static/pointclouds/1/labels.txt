@@ -1,0 +1,7 @@
+"Body",
+"Hair",
+"Head",
+"Leg",
+"Tail"
+"Foot"
+"white", "red", "green", "blue", "yellow", "magenta", "cyan"
