@@ -31,7 +31,7 @@
 
   <style>
     .third-width {
-      width: 33%; /* Set width to 80% of the parent container */
+      width: 30%; /* Set width to 30% of the parent container */
       margin: 0; /* Center the div */
       text-align: center; /* Center-align text */
     }
@@ -188,92 +188,102 @@
           <div class="content has-text-justified">
             
             <div class="level">
-              <div class="level-item">
-                  <model-viewer
-                      src="static/pointclouds/1/input.glb"
-                      style="width: 16%; height: 130px;"
-                      alt="Neil"
-                      camera-controls
-                      shadow-intensity="1"
-                      camera-controls
-                      touch-action="pan-y">
-                  </model-viewer>
-                  <model-viewer
-                      src="static/pointclouds/1/pred.glb"
-                      style="width: 16%; height: 130px;"
-                      alt="Neil"
-                      camera-controls
-                      shadow-intensity="1"
-                      camera-controls
-                      touch-action="pan-y">
-                  </model-viewer>
-                  <model-viewer
-                        src="static/pointclouds/2/input.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                <div class="third-width">
+                  <div class="level">
+                    <model-viewer
+                        src="static/pointclouds/1/input.glb"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D object - interactive"
+                        camera-controls
                         shadow-intensity="1"
-                        camera-controls touch-action="pan-y">
-                  </model-viewer>
-                  <model-viewer
-                        src="static/pointclouds/2/pred.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
-                        shadow-intensity="1" camera-controls touch-action="pan-y">
-                  </model-viewer>
-                  <model-viewer
-                        src="static/pointclouds/3/input.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                        camera-controls
+                        touch-action="pan-y">
+                    </model-viewer>
+                    <model-viewer
+                        src="static/pointclouds/1/pred.glb"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D segmentation - interactive"
+                        camera-controls
                         shadow-intensity="1"
-                        camera-controls touch-action="pan-y">
-                  </model-viewer>
-                  <model-viewer
-                        src="static/pointclouds/3/pred.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
-                        shadow-intensity="1" camera-controls touch-action="pan-y">
-                  </model-viewer>
+                        camera-controls
+                        touch-action="pan-y">
+                    </model-viewer>
+                  </div>
+                  <div>
+                    <font color="#FF0000">Body</font>
+                    <font color="#00CC00">Hair</font>
+                    <font color="#0000FF">Head</font>
+                    <font color="#D2A000">Leg</font>
+                    <font color="#FF00FF">Tail</font>
+                    <br>
+                    <font color="#00CDCD">Foot</font>
+                  </div>
                 </div>
-              </div>
+
+                <div class="third-width">
+                  <div class="level">
+                    <model-viewer
+                          src="static/pointclouds/2/input.glb"
+                          style="width: 50%; aspect-ratio: 1 / 1.3;"
+                          alt="3D object - interactive"
+                          shadow-intensity="1"
+                          camera-controls touch-action="pan-y">
+                    </model-viewer>
+                    <model-viewer
+                          src="static/pointclouds/2/pred.glb"
+                          style="width: 50%; aspect-ratio: 1 / 1.3;"
+                          alt="3D segmentation - interactive"
+                          shadow-intensity="1" camera-controls touch-action="pan-y">
+                    </model-viewer>
+                  </div>
+                  <div>
+                    <font color="#FF0000">Body</font>
+                    <font color="#00CC00">Clothing</font>
+                    <font color="#0000FF">Hair</font>
+                    <font color="#909090">Foot</font>
+                    <font color="#D2A000">Head</font>
+                    <font color="#00CDCD">Ear</font>
+                    <font color="#FF00FF">Arm</font>
+                    <font color="#808000">Hand</font>
+                    <font color="#800080">Leg</font>
+                    <font color="#008080">Shorts</font>
+                    <font color="#1A344D">Tail</font>
+                  </div>
+                </div>
+                <div class="third-width">
+                  <div class="level">
+                    <model-viewer
+                          src="static/pointclouds/3/input.glb"
+                          style="width: 50%; aspect-ratio: 1 / 1.3;"
+                          alt="3D object - interactive"
+                          shadow-intensity="1"
+                          camera-controls touch-action="pan-y">
+                    </model-viewer>
+                    <model-viewer
+                          src="static/pointclouds/3/pred.glb"
+                          style="width: 50%; aspect-ratio: 1 / 1.3;"
+                          alt="3D segmentation - interactive"
+                          shadow-intensity="1" camera-controls touch-action="pan-y">
+                    </model-viewer>
+                  </div>
+                  <div>
+                    <font color="#FF0000">Flowerpot</font>
+                    <font color="#00CDCD">Flowers</font>
+                    <font color="#0000FF">Leaf</font>
+                    <font color="#D2A000">Flower Stems</font>
+                    <font color="#00CC00">Flower Cores</font>
+                    <font color="#FF00FF">Mud</font>
+                  </div>
+                </div>
             </div>
+            
             <div class="level">
               <div class="third-width">
-                <font color="#FF0000">Body</font>
-                <font color="#00CC00">Hair</font>
-                <font color="#0000FF">Head</font>
-                <font color="#D2A000">Leg</font>
-                <font color="#FF00FF">Tail</font>
-                <br>
-                <font color="#00CDCD">Foot</font>
-              </div>
-              <div class="third-width">
-                <font color="#FF0000">Body</font>
-                <font color="#00CC00">Clothing</font>
-                <font color="#0000FF">Hair</font>
-                <font color="#909090">Foot</font>
-                <font color="#D2A000">Head</font>
-                <font color="#00CDCD">Arm</font>
-                <font color="#FF00FF">Ear</font>
-                <font color="#808000">Hand</font>
-                <font color="#800080">Leg</font>
-                <font color="#008080">Shorts</font>
-                <font color="#1A344D">Tail</font>
-              </div>
-              <div class="third-width">
-                <font color="#FF0000">Flowerpot</font>
-                <font color="#00CDCD">Flowers</font>
-                <font color="#0000FF">Leaf</font>
-                <font color="#D2A000">Flower Stems</font>
-                <font color="#00CC00">Flower Cores</font>
-                <font color="#FF00FF">Mud</font>
-              </div>
-            </div>
-            <div class="level">
-              <div class="level-item">
+                <div class="level">
                   <model-viewer
                       src="static/pointclouds/4/input.glb"
-                      style="width: 16%; height:130px;"
-                      alt="Neil"
+                      style="width: 50%; aspect-ratio: 1 / 1.3;"
+                      alt="3D object - interactive"
                       camera-controls
                       shadow-intensity="1"
                       camera-controls
@@ -281,69 +291,76 @@
                   </model-viewer>
                   <model-viewer
                       src="static/pointclouds/4/pred.glb"
-                      style="width: 16%; height: 130px;"
-                      alt="Neil"
+                      style="width: 50%; aspect-ratio: 1 / 1.3;"
+                      alt="3D segmentation - interactive"
                       camera-controls
                       shadow-intensity="1"
                       camera-controls
                       touch-action="pan-y">
                   </model-viewer>
+                </div>
+                <div>
+                    <font color="#FF0000">Body</font>
+                    <font color="#00CC00">Head</font>
+                    <font color="#0000FF">Knapsack</font>
+                    <font color="#D2A000">Arm</font>
+                    <font color="#909090">Leg</font>
+                    <font color="#FF00FF">Foot</font>
+                    <font color="#00CDCD">Hand</font>
+                    <font color="#808000">Neck</font>
+                </div>
+              </div>
+              <div class="third-width">
+                <div class="level">
                   <model-viewer
                         src="static/pointclouds/5/input.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D object - interactive"
                         shadow-intensity="1"
                         camera-controls touch-action="pan-y">
                   </model-viewer>
                   <model-viewer
                         src="static/pointclouds/5/pred.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D segmentation - interactive"
                         shadow-intensity="1" camera-controls touch-action="pan-y">
                   </model-viewer>
+                </div>
+                <div>
+                  <font color="#FF0000">Body</font>
+                  <font color="#00CC00">Head</font>
+                  <font color="#0000FF">Leg</font>
+                  <font color="#D2A000">Wing</font>
+                  <font color="#FF00FF">Tail</font>
+                  <font color="#00CDCD">Foot</font>
+                </div>
+              </div>
+              <div class="third-width">
+                <div class="level">
                   <model-viewer
                         src="static/pointclouds/6/input.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D object - interactive"
                         shadow-intensity="1"
                         camera-controls touch-action="pan-y">
                   </model-viewer>
                   <model-viewer
                         src="static/pointclouds/6/pred.glb"
-                        style="width: 16%; height: 130px;"
-                        alt="Neil"
+                        style="width: 50%; aspect-ratio: 1 / 1.3;"
+                        alt="3D segmentation - interactive"
                         shadow-intensity="1" camera-controls touch-action="pan-y">
                   </model-viewer>
-              </div>
-            </div>
-            <div class="level">
-              <div class="third-width">
-                <font color="#FF0000">Body</font>
-                <font color="#00CC00">Head</font>
-                <font color="#0000FF">Knapsack</font>
-                <font color="#D2A000">Arm</font>
-                <font color="#909090">Leg</font>
-                <font color="#FF00FF">Foot</font>
-                <font color="#00CDCD">Hand</font>
-                <font color="#808000">Neck</font>
-              </div>
-              <div class="third-width">
-                <font color="#FF0000">Body</font>
-                <font color="#00CC00">Head</font>
-                <font color="#0000FF">Leg</font>
-                <font color="#D2A000">Wing</font>
-                <font color="#FF00FF">Tail</font>
-                <font color="#00CDCD">Foot</font>
-              </div>
-              <div class="third-width">
-                <font color="#FF0000">Body</font>
-                <font color="#00CC00">Collar</font>
-                <font color="#0000FF">Head</font>
-                <font color="#D2A000">Arm</font>
-                <font color="#909090">Tail</font>
-                <font color="#FF00FF">Foot</font>
-                <font color="#00CDCD">Hand</font>
-                <font color="#808000">Leg</font>
+                </div>
+                <div>
+                  <font color="#FF0000">Body</font>
+                  <font color="#00CC00">Collar</font>
+                  <font color="#0000FF">Head</font>
+                  <font color="#D2A000">Arm</font>
+                  <font color="#909090">Leg</font>
+                  <font color="#FF00FF">Foot</font>
+                  <font color="#00CDCD">Hand</font>
+                  <font color="#808000">Tail</font>
+                </div>
               </div>
             </div>
           </div>
