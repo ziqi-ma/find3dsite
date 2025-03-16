@@ -119,11 +119,9 @@
       <div class="hero-body">
         <p style="font-size: 20px; color: black;">
           We present <b>Find3D</b>: a method to segment <b>any</b> part in <b>any</b> object based on <b>any</b> text query.
-          Find3D lifts 3D part segmentation into the open world, and even works on in-the-wild 3D constructions from iPhone photos and AI-generated images!
+          Find3D lifts 3D part segmentation into the open world, and even works on in-the-wild 3D constructions from iPhone photos!
         </p>
-        <video id="teaser" autoplay muted loop playsinline height="80%">
-          <source src="static/videos/sidebyside.mp4" type="video/mp4">
-        </video>
+        <img src="static/images/qualitative_new.png" alt="qualitative" width="100%">
       </div>
     </div>
   </section>
@@ -140,9 +138,8 @@
               However, prior works studying this capability are limited to a small number of object types (such as chairs and tables), and only allow queries for a predefined set of parts.
               These methods are called "closed-world" segmentation methods. Our method, called Find3D, lifts 3D part segmentation to the open world - you can query <b>any</b> part in <b>any</b> object based on <b>any</b> text query.
               This is achieved by a powerful data engine which leverages 2D foundation models for creating training data, and a contrastive-based recipe for training a scalable 3D model.
-              Our method allows us to train a model from 30K diverse 3D assets from the internet (from the Objaverse dataset) with 1.5M annotated parts, without any human annotation. 
-              Our model provides strong performance and generalization across multiple datasets, with up to a <b>3&times</b> improvement in mIoU over the next best method.
-              Find3D is also <b>6&times</b> to over <b>300&times</b> faster than existing baselines.
+              Our method allows us to train a model from 2.1 million part annotations and <b>1755&times</b> more unique part times than existing combined! We achieve <b>260%</b>
+              improvement in mIoU and boost speed by <b>6&times</b> to over <b>300&times</b>. We provide a scaling analysis that underscores the impact of our data engine approach.
               To encourage research in general-category open-world 3D part segmentation, we also release a benchmark for general objects and parts.
             </p>
             <img src="static/images/teaser.png" alt="Approach" width="100%">
@@ -164,9 +161,7 @@
             <p style="font-size: 20px; color: black;">
               Our method, called Find3D, works on diverse objects from Objaverse.
             </p>
-            <video id="allours" autoplay muted loop playsinline height="80%">
-              <source src="static/videos/allours.mp4" type="video/mp4">
-            </video>
+            <img src="static/images/qualitative_multiviewobj_website.png" alt="qualitative_ours" width="100%">
           </div>
         </div>
       </div>
@@ -373,26 +368,6 @@
         </div>
       </div>
       <!--ObjaversePart. -->
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Approach. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-            <h2 class="title is-3">In the Wild</h2>
-
-          <div class="content has-text-justified">
-            <p style="font-size: 20px; color: black;">
-              Find3D also works on in-the-wild 3D constructions from iPhone photos or AI-generated images, which can be noisy and challenging!
-            </p>
-            <video id="wild" autoplay muted loop playsinline height="80%">
-              <source src="static/videos/wild.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
